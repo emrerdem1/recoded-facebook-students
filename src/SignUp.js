@@ -2,10 +2,18 @@ import React from "react";
 import db from "./firebase";
 import { Form, Col, Button } from 'react-bootstrap';
 
+
+
 const SignUpPage = () => {
+
+  const signViaGoogle = () => null;
+
   return (
     <Form>
       <Form.Row>
+        <Col xl={1}>
+          <Button onClick={signViaGoogle}>Login</Button>
+        </Col>
         <Col xl={2}>
           <Form.Control placeholder="City" />
         </Col>
