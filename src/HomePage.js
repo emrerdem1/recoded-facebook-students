@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { TheProvider } from './TheProvider'
-import db from "./firebase";
+import {db} from "./firebase";
 import UserItem from './UserItem'
 const HomePage = () => {
     const [dataHolder, setData] = useState('');
@@ -11,6 +11,7 @@ const HomePage = () => {
         )
         );
     }, []);
+
     return (
         <div>
             {dataHolder && dataHolder.map((user, idx) => <UserItem key={user + idx} item={user} />)}
